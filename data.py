@@ -3,7 +3,7 @@ import csv
 def load (fileName):
 	dat = []
 	with open (fileName, newline='') as csvfile:
-		rows = csv.reader (csvfile, delimiter=',', quotechar='|')
+		rows = csv.reader (csvfile, delimiter=',', quotechar='"')
 		columns = rows.__next__ ()
 		
 		for r in rows:
