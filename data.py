@@ -15,6 +15,7 @@ def load (fileName):
 			dat.append (c)
 	return dat
 
+
 def groupBy (dat, col):
 	ret = {}
 	for d in dat:
@@ -22,3 +23,17 @@ def groupBy (dat, col):
 			ret [d [col]] = []
 		ret [d [col]].append (d)
 	return ret
+
+
+def extractNamesWeights (dat, name='Name', weight='Weight'):
+	
+	names = []
+	weights = []
+	
+	if isinstance (dat, list):
+		
+		for e in dat:
+			names.append (e [name])
+			weights.append (float (e [weight]))
+	
+	return names, weights
