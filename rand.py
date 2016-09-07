@@ -4,7 +4,6 @@ def weightedSelect (elements, weights):
 	totalWeight = sum (weights)
 	r = random.random () * totalWeight
 	index = 0
-	print (r)
 	for w in weights:
 		r -= w
 		if r<= 0:
